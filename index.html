@@ -1,0 +1,164 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.topnav a {
+  float: right;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #503a72;
+  color: white;
+}
+</style>
+</head>
+<body>
+
+<div class="topnav">
+  <a href="file:///C:/Users/tusha/Desktop/Culinary%20Trace/Login.html">Login</a>
+  <a href="#contact">Contact</a>
+  <a href="#about">About</a>
+  <a class="active" href="#home">Home</a>
+</div>
+    <title>CULINARY TRACE</title>
+    <link rel="stylesheet" href="./src/css/style.css" />
+  </head>
+
+  <body>
+    <div class="landing">
+      <div class="landing-interact">
+        <div class="navbar">
+          <div class="branding">
+            <div><img class="logo" src="./src/images/logo.png" /></div>
+            <div class="logo-title">CULINARY TRACE</div>
+          </div>
+        </div>
+        <div class="title">
+          <div id="typewriter" class="changing"></div>
+          <div class="sub-title">Find awesome Mess near you.</div>
+        </div>
+        <div class="search">
+          <select
+            id="selection"
+            onchange="updateSelection(); document.getElementById('search').href=`./static/list.html?q=${this.value}`;"
+            class="search-bar"
+            type="text"
+            placeholder="Enter your delivery location"
+          >
+            <option value="" selected style="display: none"
+              >Select your location</option
+            >
+            <option value="11">Lokmanya Nagar</option>
+            <option value="3">Vaishali Nagar</option>
+            <option value="7">Lakshmi Nagar</option>
+            <option value="1">Police Nagar</option>
+            <option value="6">Vasudev Nagar</option>
+            <option value="2">Bansi Nagar</option>
+          </select>
+          <a id="search" href="#"
+            ><button
+              disabled
+              id="search-button"
+              class="search-bar search-submit"
+              type="submit"
+            >
+              Search
+            </button></a
+          >
+          <script>
+            function updateSelection() {
+              console.log("lol");
+              if (document.getElementById("selection").value == "") {
+                document.getElementById("search-button").disabled = true;
+              } else {
+                document.getElementById("search-button").disabled = false;
+              }
+            }
+          </script>
+        </div>
+        <div class=" cities ">
+          <div class="cities-title">PLACES SERVED IN NAGPUR</div>
+        </div>
+      </div>
+      <div class="landing-images ">
+        <img class="landing-image " src="./src/images/4.jpg " />
+      </div>
+    </div>
+    <div class="features">
+      <div class="feature">
+        <div><img class="feature-image" src="src/images/order.png" /></div>
+        <div class="feature-title">Variety & Choices</div>
+        <div class="feature-desc">
+          Loathing for Italian, Thai, Indian or Chinese food? We got restaurants
+          covering many cuisines.
+        </div>
+      </div>
+      <div class="feature">
+        <div><img class="feature-image" src="src/images/ice-cream.png" /></div>
+        <div class="feature-title">Close To You</div>
+        <div class="feature-desc">
+          Get to know awesome Mess near you. Find out what they offer and
+          see customer reviews.
+        </div>
+      </div>
+    </div>
+    <div class="mobile">
+      <div class="mob-1">
+        <img class="mobile-image" src="src/images/phone.png" />
+      </div>
+      <div class="mob-2">
+        <div class="sub-title">
+          Discover new Mess near you on the go, with the all-new Culinary Trace
+          app.
+        </div>
+        <div class="stores">
+          <img
+            class="store-image"
+            onClick="alertFunction()"
+            src="src/images/play.webp"
+          /><img class="store-image" src="src/images/iOS.webp" onClick="alertFunction()"/>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <div class="credits">PCE CT GROUP NO 7</div>
+    </div>
+
+    <script>
+      const alertFunction = () => {
+        window.alert("App is in development... or is it?");
+      };
+    </script>
+    <script src="./src/js/core.js"></script>
+    <script type="text/javascript">
+      const instance = new Typewriter("#typewriter", {
+        strings: [
+          "Feeling hungry?",
+          "Cooking gone wrong?",
+        ],
+        autoStart: true,
+        loop: true
+      });
+    </script>
+  </body>
+</html>
